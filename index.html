@@ -3,35 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday Daksha ❤️</title>
+
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
       color: white;
       text-align: center;
     }
+
     .container {
-      padding: 50px 20px;
+      padding: 40px 20px;
+      animation: fadeIn 2s ease-in;
     }
-    h1 {
+
+    /* NAME ANIMATION */
+    .name span {
+      opacity: 0;
+      display: inline-block;
       font-size: 40px;
+      font-weight: bold;
+      animation: glow 0.5s forwards;
     }
+
+    .name span:nth-child(1) { animation-delay: 0.2s; }
+    .name span:nth-child(2) { animation-delay: 0.4s; }
+    .name span:nth-child(3) { animation-delay: 0.6s; }
+    .name span:nth-child(4) { animation-delay: 0.8s; }
+    .name span:nth-child(5) { animation-delay: 1s; }
+    .name span:nth-child(6) { animation-delay: 1.2s; }
+
+    @keyframes glow {
+      to {
+        opacity: 1;
+        text-shadow: 0 0 10px white, 0 0 20px #fff;
+      }
+    }
+
     p {
       font-size: 20px;
       max-width: 600px;
       margin: 20px auto;
     }
+
+    .photo img {
+      width: 80%;
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      margin-top: 20px;
+    }
+
     .heart {
-      font-size: 40px;
+      font-size: 35px;
       animation: heartbeat 1s infinite;
+      margin-top: 15px;
     }
-    @keyframes heartbeat {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.2); }
-      100% { transform: scale(1); }
-    }
+
     button {
+      margin-top: 20px;
       padding: 12px 20px;
       border: none;
       background: white;
@@ -40,37 +71,63 @@
       border-radius: 25px;
       cursor: pointer;
     }
+
+    #final {
+      display: none;
+      font-size: 22px;
+      margin-top: 20px;
+    }
+
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
   </style>
 </head>
+
 <body>
 
 <div class="container">
-  <h1>Happy Birthday Daksha ❤️</h1>
-  
-  <p>
-    Some people make life special… but you make every moment magical.  
-    I’m so grateful to have you in my life, and even more excited for all the beautiful memories we’re about to create together.  
-  </p>
+
+  <div class="name">
+    <span>D</span><span>a</span><span>k</span><span>s</span><span>h</span><span>a</span>
+  </div>
 
   <p>
-    This is just a small page, but you are my whole world. 💖  
-    Happy Birthday to my future fiancé… I love you endlessly.
+    Some experiences are special… but even more special is the person who makes them unforgettable.  
+    And for me, that person is you. ❤️
   </p>
+
+  <div class="photo">
+    <!-- ADD YOUR PHOTO LINK BELOW -->
+    <img src="https://via.placeholder.com/300" alt="Our Memory ❤️">
+  </div>
 
   <div class="heart">❤️</div>
 
-  <br><br>
-
   <button onclick="showMessage()">Click for a surprise 💌</button>
 
-  <p id="hiddenMessage" style="display:none;">
-    Can’t wait to celebrate many more birthdays together… starting with forever 💍
-  </p>
+  <div id="final">
+    Happy Birthday to my future fiancé 💍  
+    I can’t wait to celebrate a lifetime of moments with you ❤️
+  </div>
+
 </div>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="YOUR_MUSIC_LINK.mp3" type="audio/mpeg">
+</audio>
 
 <script>
   function showMessage() {
-    document.getElementById("hiddenMessage").style.display = "block";
+    document.getElementById("final").style.display = "block";
   }
 </script>
 
