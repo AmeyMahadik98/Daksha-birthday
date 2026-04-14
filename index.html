@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday Daksha ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      text-align: center;
+    }
+    .container {
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 20px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .heart {
+      font-size: 40px;
+      animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+    button {
+      padding: 12px 20px;
+      border: none;
+      background: white;
+      color: #ff4d6d;
+      font-size: 18px;
+      border-radius: 25px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Happy Birthday Daksha ❤️</h1>
+  
+  <p>
+    Some people make life special… but you make every moment magical.  
+    I’m so grateful to have you in my life, and even more excited for all the beautiful memories we’re about to create together.  
+  </p>
+
+  <p>
+    This is just a small page, but you are my whole world. 💖  
+    Happy Birthday to my future fiancé… I love you endlessly.
+  </p>
+
+  <div class="heart">❤️</div>
+
+  <br><br>
+
+  <button onclick="showMessage()">Click for a surprise 💌</button>
+
+  <p id="hiddenMessage" style="display:none;">
+    Can’t wait to celebrate many more birthdays together… starting with forever 💍
+  </p>
+</div>
+
+<script>
+  function showMessage() {
+    document.getElementById("hiddenMessage").style.display = "block";
+  }
+</script>
+
+</body>
+</html>
